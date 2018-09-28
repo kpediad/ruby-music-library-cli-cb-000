@@ -2,7 +2,7 @@ class MusicImporter
 
   attr_reader :path
 
-  def self.import
+  def import
     self.files.each{|filename| Song.create_from_filename(filename)}
   end
 
