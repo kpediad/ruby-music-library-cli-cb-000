@@ -29,11 +29,11 @@ class Song
   end
 
   def self.create(name)
-    song = self.new(name).save
+    self.new(name).save
   end
 
   def save
-    self.class.all << self
+    self.class.all.push(self)
   end
 
   def artist=(artist)
