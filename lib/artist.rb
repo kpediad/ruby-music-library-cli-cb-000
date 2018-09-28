@@ -32,7 +32,9 @@ class Artist
 
   def genres
     songs = Song.all.select{|song| song.artist == self}
-    songs.collect{|song| song.genre}.uniq
+    puts songs
+    uniq_genres = songs.collect{|song| song.genre}.uniq
+    puts uniq_genres
   end
 
 
