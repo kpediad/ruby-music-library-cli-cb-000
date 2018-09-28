@@ -18,7 +18,7 @@ class Genre
   end
 
   def self.create(name)
-    self.new(name).save
+    self.new(name).tap{|obj| obj.save}
   end
 
   def save
