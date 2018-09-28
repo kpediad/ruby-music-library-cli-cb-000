@@ -5,7 +5,7 @@ class MusicLibraryController
   end
 
   def call
-    puts "Give me input path bozo!"
+    puts "Welcome to your music library!"
     gets @path
   end
 
