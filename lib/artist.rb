@@ -35,7 +35,6 @@ class Artist
 
   def genres
     Song.all.select{|song| song.artist == self}.collect{|song| song.genre}.uniq
-    #binding.pry
   end
 
 
