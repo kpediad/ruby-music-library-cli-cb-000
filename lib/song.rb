@@ -9,6 +9,7 @@ class Song
     self.name = name
     self.artist = artist if artist
     self.genre = genre if genre
+    self.save
   end
 
   def self.new_from_filename(filename)
