@@ -33,7 +33,7 @@ class Song
   end
 
   def save
-    self.class.all.push(self)
+    self.class.all << self
   end
 
   def artist=(artist)
