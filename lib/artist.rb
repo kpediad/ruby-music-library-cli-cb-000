@@ -1,3 +1,5 @@
+require 'pry'
+
 class Artist
   extend Concerns::Findable
 
@@ -34,7 +36,7 @@ class Artist
     songs = Song.all.select{|song| song.artist == self}
 
     uniq_genres = songs.collect{|song| song.genre}.uniq
-    songs
+    binding.pry
   end
 
 
