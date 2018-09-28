@@ -9,6 +9,7 @@ class Artist
   def initialize(name)
     self.name = name
     self.songs = []
+    self.save
   end
 
   def self.all
@@ -33,10 +34,8 @@ class Artist
   end
 
   def genres
-    songs = Song.all.select{|song| song.artist == self}
-
-    uniq_genres = songs.collect{|song| song.genre}.uniq
-    binding.pry
+    Song.all.select{|song| song.artist == self}.collect{|song| song.genre}.uniq
+    #binding.pry
   end
 
 
