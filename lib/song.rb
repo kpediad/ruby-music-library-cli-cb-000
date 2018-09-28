@@ -34,7 +34,7 @@ class Song
   end
 
   def save
-    self.class.all.push(self)
+    self.class.all.push(self) unless self.class.all.include?(self)
   end
 
   def artist=(artist)
