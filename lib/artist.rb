@@ -6,6 +6,7 @@ class Artist
 
   def initialize(name)
     self.name = name
+    @songs = []
   end
 
   def self.all
@@ -17,7 +18,7 @@ class Artist
   end
 
   def self.create(name)
-    self.new(name).save
+    self.new(name).tap{|obj| obj.save}
   end
 
   def save
