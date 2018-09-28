@@ -38,7 +38,7 @@ class Song
 
   def artist=(artist)
     @artist = artist
-    artist.songs.push(self) unless artist.songs.include?(self)
+    artist.add_song(self) unless artist.songs.include?(self)
   end
 
   def genre=(genre)
