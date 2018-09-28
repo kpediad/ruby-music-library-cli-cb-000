@@ -31,7 +31,7 @@ class Artist
   end
 
   def genres
-    Song.all.select{|song| song.artist == self}.collect{|song| song.genre}
+    Song.all.select{|song| song.artist == self}.collect{|song| song.genre}.uniq
   end
 
 
