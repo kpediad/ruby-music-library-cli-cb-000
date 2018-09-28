@@ -11,7 +11,7 @@ class MusicImporter
   end
 
   def files
-    Dir[@path + "/**/*"].collect{|f| f.gsub(@path, "")}
+    Dir[@path + "/**/*"].collect{|f| f.gsub(@path + '/', "")}
   end
 
 end
